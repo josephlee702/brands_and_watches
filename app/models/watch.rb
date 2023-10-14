@@ -1,0 +1,3 @@
+class Watch < ApplicationRecord
+  
+end
