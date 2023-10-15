@@ -4,6 +4,7 @@ class WatchesController < ApplicationController
   end
 
   def show
-    
+    @watch = Watch.find(params[:id])
+    @brand = Brand.find(@watch.brand_id)
   end
 end
