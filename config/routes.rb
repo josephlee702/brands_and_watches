@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   # :id is being sent as a param[:id] to the show function in brands controller
   post "/brands", to: "brands#create"
   get '/brands/:id', to: 'brands#show'
+  get "/brands/:id/edit", to: "brands#edit"
+  patch "/brands/:id", to: "brands#update"
   get '/brands/:id/watches', to: 'brands#brand_watches_index'
+  
   get '/watches', to: 'watches#index'
   get '/watches/:id', to: 'watches#show'
 end
