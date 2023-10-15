@@ -1,0 +1,11 @@
+<a href="/brands">Brand Index</a>
+<a href="/watches">Watch Index</a>
+
+
+<h1><%= @brand.name %></h1>
+
+<p>Country of Origin: <%= @brand.country %></p>
+<p>Year Founded: <%= @brand.year_founded %></p>
+
+<p>Number of Watches: <%= @brand.number_of_watches%></p>
+<h3><a href="/brands/<%= @brand.id %>/watches">Watches</a></h3>

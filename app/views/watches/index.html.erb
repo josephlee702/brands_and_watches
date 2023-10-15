@@ -1,5 +1,9 @@
-<h1> Watches </h1>
+<a href="/">Home Page</a>
+<a href="/brands">Brand Index</a>
+
+
+<h1> All Watches </h1>
 
 <% @watches.each do |watch|%>
-  <%= watch.model%>
+<h3><a href="/watches/<%= watch.id %>"><%= watch.model %></a></h3>
 <%end%>

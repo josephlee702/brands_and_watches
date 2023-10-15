@@ -1,0 +1,9 @@
+<a href="/">Home Page</a>
+<a href="/watches">Watch Index</a>
+
+<h1> All Brands </h1>
+
+<% @brands.each do |brand|%>
+  <h2><a href="/brands/<%= brand.id %>"><%= brand.name %></a></h2>
+  <p>Created at: <%= brand.created_at %></p>
+<%end%>

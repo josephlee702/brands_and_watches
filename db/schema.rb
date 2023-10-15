@@ -14,16 +14,26 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_14_193356) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "brands", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "name"
+    t.string "country"
+    t.integer "year_founded"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "watches", force: :cascade do |t|
-    t.integer "brand_id"
     t.string "model"
     t.string "bracelet"
     t.string "movement"
     t.string "case_material"
     t.integer "case_size"
     t.boolean "crown_guard"
+    t.uuid "brand_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["brand_id"], name: "index_watches_on_brand_id"
   end
 
+  add_foreign_key "watches", "brands"
 end
