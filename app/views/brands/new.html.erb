@@ -1,0 +1,8 @@
+<form action="/brands" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Enter a new brand:</p>
+  <p>Title: <input type='text' name='brand[name]'/><br/></p>
+   <p>Country: <input name='brand[country]'><br/></p>
+   <p>Year Founded: <input name='brand[year_founded]'><br/></p>
+  <input type='submit'/>
+</form>

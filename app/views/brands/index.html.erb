@@ -2,6 +2,7 @@
 <a href="/watches">Watch Index</a>
 
 <h1> All Brands </h1>
+<li><a href="/brands/new">Add New Brand</a></li>
 
 <% @brands.each do |brand|%>
   <h2><a href="/brands/<%= brand.id %>"><%= brand.name %></a></h2>
