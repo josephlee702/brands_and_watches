@@ -7,9 +7,8 @@ class BrandsController < ApplicationController
     @brand = Brand.find(params[:id])
   end
 
-  def show_watches
+  def brand_watches_index
     @brand = Brand.find(params[:id])
     @watches = Watch.where(brand_id: @brand.id)
   end
-
 end

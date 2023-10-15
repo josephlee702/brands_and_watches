@@ -2,8 +2,8 @@
 
 <h1><%= @brand.name %></h1>
 
-<p><%= @brand.country %></p>
-<p><%= @brand.year_founded %></p>
+<p>Country of Origin: <%= @brand.country %></p>
+<p>Year Founded: <%= @brand.year_founded %></p>
 
 <p>Number of Watches: <%= @brand.number_of_watches%></p>
 <h3><a href="/brands/<%= @brand.id %>/watches">Watches</a></h3>

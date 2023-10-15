@@ -1,0 +1,11 @@
+<h3><a href="/brands/<%= @brand.id %>"><%= @brand.name %></a></h3>
+
+<% @watches.each do |watch|%>
+<h3><a href="/watches/<%= watch.id %>"><%= watch.model %></a></h3>
+<h5><u>Bracelet</u>: <%= watch.bracelet %></h5>
+<h5><u>Movement</u>: <%= watch.movement %></h5>
+<h5><u>Case Material</u>: <%= watch.case_material %></h5>
+<h5><u>Case Size</u>: <%= watch.case_size %></h5>
+<h5><u>Crown Guard</u>: <%= watch.crown_guard %></h5>
+
+<%end%>
