@@ -1,0 +1,9 @@
+<form action="/brands/<%= @brand.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <p>Edit <%=@brand.name %> Details </p>
+  <p>Title: <input type='text' name='brand[name]'/><br/></p>
+   <p>Country: <input name='brand[country]'><br/></p>
+   <p>Year Founded: <input name='brand[year_founded]'><br/></p>
+  <input type='submit'/>
+</form>

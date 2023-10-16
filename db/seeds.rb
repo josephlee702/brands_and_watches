@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Watch.destroy_all
+Brand.destroy_all
 
 Brand.create([
   {name: "Seiko", year_founded: 1881, country: "Japan"},
@@ -14,9 +16,20 @@ Brand.create([
 )
 
 Watch.create([
-  {model: "Prospex Speedtimer", bracelet: "Oyster", movement: "VK63", case_material: "316L", case_size: 39, crown_guard: true, brand_id: Brand.find_by(name: "Seiko").id},
-  {model: "DateJust", bracelet: "Jubiless", movement: "3235", case_material: "904L", case_size: 36, crown_guard: false, brand_id: Brand.find_by(name: "Rolex").id},
+  {model: "Prospex Speedtimer", bracelet: "Oyster", movement: "VK63", case_material: "Stainless Steel", case_size: 39, crown_guard: true, brand_id: Brand.find_by(name: "Seiko").id},
+
+  {model: "Presage", bracelet: "Oyster", movement: "WWX4", case_material: "Stainless Steel", case_size: 40, crown_guard: false, brand_id: Brand.find_by(name: "Seiko").id},
+
+  {model: "DateJust", bracelet: "Jubilee", movement: "3235", case_material: "Stainless Steel", case_size: 36, crown_guard: false, brand_id: Brand.find_by(name: "Rolex").id},
+
+  {model: "DayDate", bracelet: "Jubilee", movement: "1106", case_material: "Stainless Steel", case_size: 42, crown_guard: false, brand_id: Brand.find_by(name: "Rolex").id},
+
   {model: "Black Bay Heritage 58", bracelet: "Oyster", movement: "3235", case_material: "316L", case_size: 39, crown_guard: false, brand_id: Brand.find_by(name: "Tudor").id},
-  {model: "Seamaster 300m", bracelet: "Oyster", movement: "A8900", case_material: "316L", case_size: 43, crown_guard: false, brand_id: Brand.find_by(name: "Omega").id}
+
+  {model: "Pelagos", bracelet: "Oyster", movement: "142L", case_material: "Stainless Steel", case_size: 38, crown_guard: true, brand_id: Brand.find_by(name: "Tudor").id},
+
+  {model: "Seamaster 300m", bracelet: "Oyster", movement: "A8900", case_material: "316L", case_size: 43, crown_guard: false, brand_id: Brand.find_by(name: "Omega").id},
+
+  {model: "SpeedMaster", bracelet: "Oyster", movement: "4KZ2", case_material: "Stainless Steel", case_size: 41, crown_guard: false, brand_id: Brand.find_by(name: "Omega").id}
 ])
 
