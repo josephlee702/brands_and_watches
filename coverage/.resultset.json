@@ -224,6 +224,21 @@
           null,
           1,
           1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
           null
         ]
       },
@@ -235,11 +250,28 @@
       },
       "/Users/josephlee/2mod/projects/brands_and_watches/app/models/brand.rb": {
         "lines": [
+          1,
+          1,
+          0,
+          null,
+          null
+        ]
+      },
+      "/Users/josephlee/2mod/projects/brands_and_watches/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/josephlee/2mod/projects/brands_and_watches/app/models/watch.rb": {
+        "lines": [
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1697328025
+    "timestamp": 1697436084
   }
 }
