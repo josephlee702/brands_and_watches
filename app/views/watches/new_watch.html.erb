@@ -1,0 +1,12 @@
+<form action="/watches" method="post">
+
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <p>Enter a new watch:</p>
+  <p>Model: <input type='text' name='watch[model]'/><br/></p>
+  <p>Bracelet: <input name='watch[bracelet]'><br/></p>
+  <p>Movement: <input name='watch[movement]'><br/></p>
+  <p>Case Material: <input name='watch[case_material]'><br/></p>
+  <p>Case Size: <input name='watch[case_size]'><br/></p>
+  <p>Crown Guard: <input name='watch[crown_guard]'><br/></p>
+  <input type='submit'/>
+</form>
