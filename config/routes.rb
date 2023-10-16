@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   get '/brands/:id/watches', to: 'brands#brand_watches_index'
   get '/brands/:brand_id/watches/new', to: 'watches#new_watch'
-  post '/watches', to: 'watches#create_watch'
+  post '/brands/brand:id/watches', to: 'watches#create_watch'
 
   get '/watches', to: 'watches#index'
   get '/watches/:id', to: 'watches#show'
