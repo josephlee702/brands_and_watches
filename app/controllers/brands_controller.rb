@@ -3,10 +3,10 @@ class BrandsController < ApplicationController
     @brands = Brand.all.order(created_at: :desc)
   end
 
-  def new
+  def new_brand
   end
 
-  def create
+  def create_brand
     brand = Brand.new({
       name: params[:brand][:name],
       country: params[:brand][:country],
