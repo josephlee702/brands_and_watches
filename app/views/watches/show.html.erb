@@ -4,6 +4,8 @@
 <br>
 
 <h1><%= @watch.model %></h1>
+<a href="/watches/<%=@watch.id%>/edit">Update Watch</a>
+<%= link_to "Delete #{@watch.model}", "/watches/#{@watch.id}", data: { turbo_method: :delete }%>
 
 <p>Bracelet: <%= @watch.bracelet %></p>
 <p>Movement: <%= @watch.movement %></p>

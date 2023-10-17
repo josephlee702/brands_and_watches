@@ -2,6 +2,10 @@ class BrandsWatchesController < ApplicationController
   def index
     @brand = Brand.find(params[:brand_id])
     @watches = Watch.where(brand_id: @brand.id)
+    if (params[:order] == "model")
+      @watches = @brand.sort
+    else
+    end
   end
 
   def new

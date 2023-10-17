@@ -1,11 +1,11 @@
 <a href="/brands">Brand Index</a>
 <a href="/watches">Watch Index</a>
 <h1><a href="/brands/<%= @brand.id %>"><%= @brand.name %></a></h1>
-<p><a href="/brands/<%= @brand.id %>/watches/new">Create Watch</a></p>
-
+<p><a href="/brands/<%= @brand.id %>/watches/new">Create Watch</a> <%= link_to "Sort Watches", :order => "model" %></p>
 
 <% @watches.each do |watch|%>
 <h3><a href="/watches/<%= watch.id %>"><%= watch.model %></a></h3>
+<h5><a href="/watches/<%= watch.id %>/edit">Edit <%= watch.model %></a></h5>
 <h5><u>Bracelet</u>: <%= watch.bracelet %></h5>
 <h5><u>Movement</u>: <%= watch.movement %></h5>
 <h5><u>Case Material</u>: <%= watch.case_material %></h5>
