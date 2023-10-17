@@ -34,5 +34,17 @@ RSpec.describe 'brands show', type: :feature do
         expect(page).to have_content("Number of Watches")
       end
     end
+
+    it 'shows the watch index page link at the top of the page' do
+      visit "/brands/#{@brand_1.id}"
+      expect(page).to have_link("Watch Index")
+      visit "/brands/#{@brand_2.id}"
+      expect(page).to have_link("Watch Index")
+    end
+
+    it 'shows the watch index page link at the top of the page' do
+      visit "/brands"
+      expect(page).to have_link("Watch Index")
+    end
   end
 end

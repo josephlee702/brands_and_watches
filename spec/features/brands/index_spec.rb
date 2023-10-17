@@ -33,6 +33,13 @@ RSpec.describe 'brands index', type: :feature do
         expect(@brand_2.name).to appear_before(@brand_1.name)
         expect(@brand_1.name).to_not appear_before(@brand_2.name)
       end
+    #   As a visitor
+    #   When I visit any page on the site
+    #   Then I see a link at the top of the page that takes me to the Child Index
+      it 'shows the watch index page link at the top of the page' do
+        visit "/brands"
+        expect(page).to have_link("Watch Index")
+      end
     end
   end
 end

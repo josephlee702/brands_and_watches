@@ -34,5 +34,10 @@ RSpec.describe 'brands watches index', type: :feature do
         expect(page).to have_content(@watch_2.crown_guard)
       end
     end
+
+    it 'shows the watch index page link at the top of the page' do
+      visit "/brands"
+      expect(page).to have_link("Watch Index")
+    end
   end
 end
