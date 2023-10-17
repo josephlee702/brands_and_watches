@@ -36,4 +36,9 @@ class BrandsController < ApplicationController
 
     redirect_to "/brands/#{brand.id}"
   end
+
+  def destroy
+    Brand.find(params[:brand_id]).destroy
+    redirect_to "/brands"
+  end
 end

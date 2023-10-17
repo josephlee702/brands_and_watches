@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/brands/:brand_id', to: 'brands#show'
   get "/brands/:brand_id/edit", to: "brands#edit"
   patch "/brands/:brand_id", to: "brands#update"
+  delete "/brands/:brand_id", to: 'brands#destroy'
 
   get '/brands/:brand_id/watches', to: 'brands_watches#index'
   get '/brands/:brand_id/watches/new', to: 'brands_watches#new'
