@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.12.3/application.js' type='text/javascript'></script>
     <link href='./assets/0.12.3/application.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
-    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.12.3/favicon.png" />
   </head>
 
@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2023-10-17T00:17:59-06:00">2023-10-17T00:17:59-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2023-10-17T00:36:15-06:00">2023-10-17T00:36:15-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,15 +22,15 @@
   <h2>
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
-      <span class="yellow">
-  88.37%
+      <span class="green">
+  91.46%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.88
+         0.91
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>86</b> relevant lines,
-    <span class="green"><b>76</b> lines covered</span> and
-    <span class="red"><b>10</b> lines missed. </span>
-    (<span class="yellow">
-  88.37%
+    <b>82</b> relevant lines,
+    <span class="green"><b>75</b> lines covered</span> and
+    <span class="red"><b>7</b> lines missed. </span>
+    (<span class="green">
+  91.46%
 </span>
 )
   </div>
@@ -82,13 +82,13 @@
           </tr>
         
           <tr class="t-file">
-            <td class="strong t-file__name"><a href="#2b40a9c4eab7501d94e55ce3364efdea284cd7fe" class="src_link" title="app/controllers/watches_controller.rb">app/controllers/watches_controller.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">50.00 %</td>
+            <td class="strong t-file__name"><a href="#9de1b1ef5fffcc51dbc44b1d645a6e33af8d6b22" class="src_link" title="app/controllers/brands_watches_controller.rb">app/controllers/brands_watches_controller.rb</a></td>
+            <td class="red strong cell--number t-file__coverage">58.33 %</td>
             <td class="cell--number">28</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">0.50</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">7</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">0.58</td>
             
           </tr>
         
@@ -316,12 +316,12 @@
 </div>
 
       
-        <div class="source_table" id="2b40a9c4eab7501d94e55ce3364efdea284cd7fe">
+        <div class="source_table" id="9de1b1ef5fffcc51dbc44b1d645a6e33af8d6b22">
   <div class="header">
-    <h3>app/controllers/watches_controller.rb</h3>
+    <h3>app/controllers/brands_watches_controller.rb</h3>
     <h4>
       <span class="red">
-  50.0%
+  58.33%
 </span>
 
       lines covered
@@ -330,9 +330,9 @@
     
 
     <div class="t-line-summary">
-      <b>16</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>8</b> lines missed.</span>
+      <b>12</b> relevant lines.
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
 
     
@@ -349,7 +349,7 @@
 
             
 
-            <code class="ruby">class WatchesController &lt; ApplicationController</code>
+            <code class="ruby">class BrandsWatchesController &lt; ApplicationController</code>
           </li>
         </div>
       
@@ -371,51 +371,51 @@
 
             
 
-            <code class="ruby">    @watches = Watch.all.where(crown_guard: :true)</code>
+            <code class="ruby">    @brand = Brand.find(params[:brand_id])</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="5">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
+          <li class="covered" data-hits="1" data-linenumber="4">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def show</code>
+            <code class="ruby">    @watches = Watch.where(brand_id: @brand.id)</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="7">
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    if (params[:order] == &quot;model&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="missed" data-hits="0" data-linenumber="6">
             
             
 
             
 
-            <code class="ruby">    @watch = Watch.find(params[:watch_id])</code>
+            <code class="ruby">      @watches = @brand.sort</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby">    else</code>
           </li>
         </div>
       
@@ -426,7 +426,7 @@
 
             
 
-            <code class="ruby">  end </code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -437,40 +437,40 @@
 
             
 
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="10">
+            
+            
+
+            
+
             <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
+          <li class="covered" data-hits="1" data-linenumber="11">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def edit</code>
+            <code class="ruby">  def new</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="11">
+          <li class="missed" data-hits="0" data-linenumber="12">
             
             
 
             
 
-            <code class="ruby">    @watch = Watch.find(params[:watch_id])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
+            <code class="ruby">    @brand = Brand.find(params[:brand_id])</code>
           </li>
         </div>
       
@@ -481,95 +481,95 @@
 
             
 
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def watch_params</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">    params.permit(:model, :bracelet, :movement, :case_material, :case_size, :crown_guard)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="16">
-            
-            
-
-            
-
             <code class="ruby">  end</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
             
 
-            <code class="ruby">  </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="18">
+          <li class="covered" data-hits="1" data-linenumber="15">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def update</code>
+            <code class="ruby">  def create</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="19">
+          <li class="missed" data-hits="0" data-linenumber="16">
             
             
 
             
 
-            <code class="ruby">    @watch = Watch.find(params[:watch_id])</code>
+            <code class="ruby">    @brand = Brand.find(params[:brand_id])</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="20">
+          <li class="missed" data-hits="0" data-linenumber="17">
             
             
 
             
 
-            <code class="ruby">    @watch.update(watch_params)</code>
+            <code class="ruby">    @brand.watches.create({</code>
           </li>
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="21">
+          <li class="never" data-hits="" data-linenumber="18">
             
             
 
             
 
-            <code class="ruby">    redirect_to &quot;/watches/#{@watch.id}&quot;</code>
+            <code class="ruby">      model: params[:watch][:model],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">      bracelet: params[:watch][:bracelet],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
+            
+            
+
+            
+
+            <code class="ruby">      movement: params[:watch][:movement],</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="21">
+            
+            
+
+            
+
+            <code class="ruby">      case_material: params[:watch][:case_material],</code>
           </li>
         </div>
       
@@ -580,7 +580,7 @@
 
             
 
-            <code class="ruby">  end</code>
+            <code class="ruby">      case_size: params[:watch][:case_size],</code>
           </li>
         </div>
       
@@ -591,29 +591,29 @@
 
             
 
+            <code class="ruby">      crown_guard: params[:watch][:crown_guard]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="24">
+            
+            
+
+            
+
+            <code class="ruby">    })</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="25">
+            
+            
+
+            
+
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="24">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def destroy</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="25">
-            
-            
-
-            
-
-            <code class="ruby">    Watch.find(params[:watch_id]).destroy</code>
           </li>
         </div>
       
@@ -624,7 +624,7 @@
 
             
 
-            <code class="ruby">    redirect_to &quot;/watches&quot;</code>
+            <code class="ruby">    redirect_to &quot;/brands/#{@brand.id}/watches&quot;</code>
           </li>
         </div>
       
