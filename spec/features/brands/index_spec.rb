@@ -17,6 +17,21 @@ RSpec.describe 'brands index', type: :feature do
         expect(page).to have_content("All Brands")
         expect(page).to have_content(@brand_1.name)
         expect(page).to have_content(@brand_2.name)
+
+        # See created_at next to each brand
+        
+        expect(page).to have_content(@brand_1.created_at)
+        expect(page).to have_content(@brand_1.created_at)
+      end
+
+      it 'shows brands ordered by most recently created' do
+        # As a visitor
+        # When I visit the parent index,
+        # I see that records are ordered by most recently created first
+        
+        visit "/brands"
+        expect(@brand_2.name).to appear_before(@brand_1.name)
+        expect(@brand_1.name).to_not appear_before(@brand_2.name)
       end
     end
   end
