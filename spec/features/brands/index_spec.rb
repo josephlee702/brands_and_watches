@@ -43,3 +43,4 @@ RSpec.describe 'brands index', type: :feature do
     end
   end
 end
+

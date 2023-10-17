@@ -42,3 +42,4 @@ RSpec.describe 'brands watches index', type: :feature do
     end
   end
 end
+
