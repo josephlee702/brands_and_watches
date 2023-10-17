@@ -5,6 +5,7 @@
 <li><a href="/brands/new">Add New Brand</a></li>
 
 <% @brands.each do |brand|%>
-  <h2><a href="/brands/<%= brand.id %>"><%= brand.name %></a></h2>
+  <h2><a href="/brands/<%= brand.id %>"><%= brand.name %></a>
+  </h2> <a href="/brands/<%= brand.id %>/edit">Edit <%= brand.name %></a>
   <p>Created at: <%= brand.created_at %></p>
 <%end%>
