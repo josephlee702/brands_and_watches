@@ -24,6 +24,12 @@ RSpec.describe 'watch show', type: :feature do
         expect(page).to have_content(@watch_1.crown_guard)
         expect(page).to_not have_content(@watch_2.model)
       end
+
+      it 'shows the brands index links at the top of the page' do
+        visit "/watches/#{@watch_1.id}"
+        expect(page).to have_link("Watch Index")
+        expect(page).to have_link("Brand Index")
+      end
     end
   end
 end

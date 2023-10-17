@@ -36,7 +36,7 @@ RSpec.describe 'brands index', type: :feature do
     #   As a visitor
     #   When I visit any page on the site
     #   Then I see a link at the top of the page that takes me to the Child Index
-      it 'shows the watch index page link at the top of the page' do
+      it 'shows the watch and brand indexes links at the top of the page' do
         visit "/brands"
         expect(page).to have_link("Watch Index")
       end
