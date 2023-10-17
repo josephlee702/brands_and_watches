@@ -21,5 +21,9 @@ RSpec.describe 'watch index', type: :feature do
         expect(page).to have_content(@watch_2.model)
       end
     end
+    it 'shows the watch index page link at the top of the page' do
+      visit "/watches"
+      expect(page).to have_link("All Brands")
+    end
   end
 end
