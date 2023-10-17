@@ -1,6 +1,6 @@
 class WatchesController < ApplicationController
   def index
-    @watches = Watch.all
+    @watches = Watch.all.where(crown_guard: :true)
   end
 
   def show
