@@ -56,6 +56,8 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy' #save_and_open_page
   gem 'simplecov'
+  gem 'shoulda-matchers'
+  gem 'orderly'
 end
 
 group :development do

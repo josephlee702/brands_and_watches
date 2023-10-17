@@ -6,18 +6,18 @@ Rails.application.routes.draw do
   get '/', to: "welcome#index"
   get '/brands', to: 'brands#index'
 
-  get '/brands/new', to: 'brands#new_brand'
+  get '/brands/new', to: 'brands#new'
   # :id is being sent as a param[:id] to the show function in brands controller
-  post "/brands", to: "brands#create_brand"
+  post "/brands", to: "brands#create"
 
-  get '/brands/:id', to: 'brands#show'
-  get "/brands/:id/edit", to: "brands#edit"
-  patch "/brands/:id", to: "brands#update"
+  get '/brands/:brand_id', to: 'brands#show'
+  get "/brands/:brand_id/edit", to: "brands#edit"
+  patch "/brands/:brand_id", to: "brands#update"
 
-  get '/brands/:id/watches', to: 'brands#brand_watches_index'
-  get '/brands/:brand_id/watches/new', to: 'watches#new_watch'
-  post '/brands/brand:id/watches', to: 'watches#create_watch'
+  get '/brands/:brand_id/watches', to: 'brands_watches#index'
+  get '/brands/:brand_id/watches/new', to: 'brands_watches#new'
+  post '/brands/:brand_id/watches', to: 'brands_watches#create'
 
   get '/watches', to: 'watches#index'
-  get '/watches/:id', to: 'watches#show'
+  get '/watches/:watch_id', to: 'watches#show'
 end

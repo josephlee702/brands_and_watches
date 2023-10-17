@@ -3,10 +3,10 @@ class BrandsController < ApplicationController
     @brands = Brand.all.order(created_at: :desc)
   end
 
-  def new_brand
+  def new
   end
 
-  def create_brand
+  def create
     brand = Brand.new({
       name: params[:brand][:name],
       country: params[:brand][:country],
@@ -19,28 +19,21 @@ class BrandsController < ApplicationController
   end
 
   def show
-    @brand = Brand.find(params[:id])
+    @brand = Brand.find(params[:brand_id])
   end
 
   def edit
-    @brand = Brand.find(params[:id])
+    @brand = Brand.find(params[:brand_id])
+  end
+
+  def brand_params
+    params.permit(:name, :country, :year_founded)
   end
 
   def update
-    brand = Brand.find(params[:id])
-    brand.update({
-      name: params[:brand][:name],
-      country: params[:brand][:country],
-      year_founded: params[:brand][:year_founded]
-    })
-
-    brand.save
+    brand = Brand.find(params[:brand_id])
+    brand.update(brand_params)
 
     redirect_to "/brands/#{brand.id}"
-  end
-
-  def brand_watches_index
-    @brand = Brand.find(params[:id])
-    @watches = Watch.where(brand_id: @brand.id)
   end
 end
