@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'brands index', type: :feature do
-  before :each do
+  before(:each) do
     @brand_1 = Brand.create(name: "Seiko", year_founded: 1881, country: "Japan")
     @brand_2 = Brand.create(name: "Rolex", year_founded: 1905, country: "UK")
   end
