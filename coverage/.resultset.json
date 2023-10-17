@@ -258,7 +258,7 @@
           1,
           null,
           1,
-          0,
+          5,
           null,
           null,
           1,
@@ -274,30 +274,37 @@
           null
         ]
       },
+      "/Users/josephlee/2mod/projects/brands_and_watches/app/models/watch.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/josephlee/2mod/projects/brands_and_watches/app/controllers/brands_controller.rb": {
         "lines": [
           1,
           1,
-          2,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null,
-          null,
-          null,
-          0,
-          null,
           0,
           null,
           null,
           1,
+          null,
+          null,
+          1,
           0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          1,
+          3,
           null,
           null,
           1,
@@ -329,6 +336,6 @@
         ]
       }
     },
-    "timestamp": 1697524821
+    "timestamp": 1697526046
   }
 }
