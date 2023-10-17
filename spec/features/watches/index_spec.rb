@@ -21,15 +21,5 @@ RSpec.describe 'watch index', type: :feature do
         expect(page).to have_content(@watch_2.model)
       end
     end
-
-  #   describe 'when I visit /watches' do
-  # #   As a visitor
-  # #   When I visit any page on the site
-  # #   Then I see a link at the top of the page that takes me to the Child Index
-  #     it 'shows the index page link at the top of the page' do
-  #       visit "/watches"
-  #       expect(page).to have_link("Watch Index")
-  #     end
-  #   end
   end
 end
