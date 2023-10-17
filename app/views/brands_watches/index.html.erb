@@ -5,6 +5,7 @@
 
 <% @watches.each do |watch|%>
 <h3><a href="/watches/<%= watch.id %>"><%= watch.model %></a></h3>
+<h5><a href="/watches/<%= watch.id %>/edit">Edit <%= watch.model %></a></h5>
 <h5><u>Bracelet</u>: <%= watch.bracelet %></h5>
 <h5><u>Movement</u>: <%= watch.movement %></h5>
 <h5><u>Case Material</u>: <%= watch.case_material %></h5>

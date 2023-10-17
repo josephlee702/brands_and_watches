@@ -6,4 +6,5 @@
 
 <% @watches.each do |watch|%>
 <h3><a href="/watches/<%= watch.id %>"><%= watch.model %></a></h3>
+</h2> <a href="/watches/<%= watch.id %>/edit">Edit <%= watch.model %></a>
 <%end%>
