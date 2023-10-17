@@ -6,4 +6,18 @@ class WatchesController < ApplicationController
   def show
     @watch = Watch.find(params[:watch_id])
   end 
+
+  def edit
+    @watch = Watch.find(params[:watch_id])
+  end
+
+  def watch_params
+    params.permit(:model, :bracelet, :movement, :case_material, :case_size, :crown_guard)
+  end
+  
+  def update
+    @watch = Watch.find(params[:watch_id])
+    @watch.update(watch_params)
+    redirect_to "/watches/#{@watch.id}"
+  end
 end

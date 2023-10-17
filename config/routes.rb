@@ -19,5 +19,7 @@ Rails.application.routes.draw do
   post '/brands/:brand_id/watches', to: 'brands_watches#create'
 
   get '/watches', to: 'watches#index'
+  get '/watches/:watch_id/edit', to: 'watches#edit'
   get '/watches/:watch_id', to: 'watches#show'
+  patch "/watches/:watch_id", to: 'watches#update'
 end
