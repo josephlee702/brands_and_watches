@@ -20,4 +20,9 @@ class WatchesController < ApplicationController
     @watch.update(watch_params)
     redirect_to "/watches/#{@watch.id}"
   end
+
+  def destroy
+    Watch.find(params[:watch_id]).destroy
+    redirect_to "/watches"
+  end
 end

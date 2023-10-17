@@ -23,4 +23,5 @@ Rails.application.routes.draw do
   get '/watches/:watch_id/edit', to: 'watches#edit'
   get '/watches/:watch_id', to: 'watches#show'
   patch "/watches/:watch_id", to: 'watches#update'
+  delete "/watches/:watch_id", to: 'watches#destroy'
 end
