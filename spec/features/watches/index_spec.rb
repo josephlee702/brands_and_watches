@@ -18,6 +18,7 @@ RSpec.describe 'watch index', type: :feature do
         visit "/watches"
         expect(page).to have_content("All Watches")
         expect(page).to have_content(@watch_1.model)
+        require 'pry'; binding.pry
         expect(page).to have_content(@watch_2.model)
       end
     end
